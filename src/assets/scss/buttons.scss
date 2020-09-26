@@ -1,0 +1,76 @@
+// Button  
+.btn-rounded {
+  &.btn-with-icon {
+    border-radius: $btn-border-radius;
+
+    svg {
+      height: 18px;
+      margin-right: $space6;
+    }
+  }
+
+  &.btn-white {
+    color: $primary;
+
+    svg {
+      fill: $primary;
+    }
+  }
+
+  &.btn-white-outline {
+    border-color: $white;
+    color: $white;
+
+    svg {
+      fill: $white;
+    }
+  }
+}
+
+// Button Gradient
+.mat-button {
+  &.btn-primary-gradient {
+    color: $white;
+    background: rgb(187, 237, 194);
+    background: linear-gradient(232deg, rgba(187, 237, 194, 1) 0%, rgba(153, 230, 169, 1) 15%, rgba(115, 197, 156, 1) 65%, rgba(69, 128, 118, 1) 100%);
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    padding: $space10 $space24;
+    .mat-button-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    .btn-svg-icon {
+      svg {
+        fill: $white;
+      }
+    }
+  }
+}
+
+// Button fab
+.mat-fab {
+  &:hover, &:active,  &:not([disabled]):active:not([class*=mat-elevation-z]),
+  &.mat-mini-fab:not([disabled]):active:not([class*=mat-elevation-z]) {
+    box-shadow: $btn-box-shadow;
+  }
+
+  &.btn-save-fab {
+    box-shadow: none;
+  }
+  &.btn-fab-lg {
+    width: 72px;
+    height: 72px;
+
+    .mat-icon {
+      font-size: 40px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &.mat-secondary {
+    background: $secondary;
+    color: $white;
+  }
+}

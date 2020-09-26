@@ -1,0 +1,62 @@
+// Variable 
+$primary: 							#458076;
+$secondary:							#F1CE49;
+$darkSecondary: 					#1c46a7;
+$edarkSecondary: 					#143a92;
+$lightergray:						#F6F6F6;
+$lightgray: 						#D6DAE6;
+$darkgray: 							#42475E;
+$textcolor: 						#6e6e6e;
+$white: 							#ffffff;
+$black: 							#000000;
+
+$dark-blue: #03334F;
+
+// Button
+$btn-border-radius: 		50px;
+$btn-box-shadow: 			0 6px 12px rgba(0,0,0,0.12);
+$transition: 				0.3s ease;
+
+// Card 
+$card-shadow:		 		0 3px 6px rgba(0,0,0,0.16);
+$card-hover-shadow: 		0 6px 10px rgba(0,0,0,0.16);
+
+// Spacing
+$space2:		2px;
+$space4: 		4px;
+$space6: 		6px;
+$space8:  		8px;
+$space10:  		10px;
+$space12:  		12px;
+$space16:  		16px;
+$space24:  		24px;
+$space30:  		30px;
+$space40: 		40px;
+
+// Media query
+$breakpoint-lg:  1279px;
+$breakpoint-md:  959px;
+$breakpoint-sm:  599px;
+
+
+// Mixins
+@mixin position($top: auto, $right: auto, $bottom: auto, $left: auto, $position: relative) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: $position;
+}
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+@mixin transition($transitions) {
+	-webkit-transition: $transitions;
+	-moz-transition: $transitions;
+	-ms-transition: $transitions;
+	transition: $transitions;
+}
+	

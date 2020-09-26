@@ -1,0 +1,67 @@
+.header-section {
+  background: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+
+  @media (max-width: $breakpoint-md) {
+    background: rgb(187, 237, 194);
+    background: linear-gradient(232deg, rgba(187, 237, 194, 1) 0%, rgba(153, 230, 169, 1) 15%, rgba(115, 197, 156, 1) 75%, rgba(69, 128, 118, 1) 100%);
+    position: fixed;
+  }
+
+  .nav-logo {
+    margin-right: $space40;
+  }
+
+  .header-navbar {
+    display: flex;
+  }
+
+  .menu-icon {
+    color: $white;
+  }
+
+  .btn-post-offer {
+    margin-right: $space6;
+    font-size: 11px;
+  }
+
+  .btn-login {
+    font-size: 11px;
+  }
+}
+
+// Mobile sidebar
+.mobile-sidebar {
+  .mobile-menu-top {
+    padding: $space16;
+    border-bottom: 1px solid rgba(112, 112, 112, .3);
+    p {
+      font-size: 16px;
+      margin: 0;
+      color: $dark-blue;
+    }
+    .close-icon {
+      color: $dark-blue;
+      opacity: 0.6;
+      transition: $transition;
+      &:hover, &:active {
+        opacity: 1;
+        transition: $transition;
+      }
+    }
+  }
+  .mat-nav-list {
+    .mat-list-item {
+      font-size: 16px;
+      color: $primary;
+      svg {
+        width: 20px;
+        margin-right: 12px;
+        fill: $primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+// Footer
+.footer-section {
+  padding: $space40 0;
+  background: rgb(160, 236, 171);
+  background: linear-gradient(234deg, rgba(160, 236, 171, 1) 0%, rgba(115, 197, 156, 1) 100%);
+
+  .footer-address {
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+
+  .footer-nav-top {
+    margin-bottom: $space24;
+
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+
+  .footer-newsletter {
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: $space24;
+      text-align: center;
+
+      p {
+        padding: 0 $space24;
+      }
+    }
+  }
+
+  .footer-logo {
+    display: inline-block;
+
+    @media (max-width: $breakpoint-md) {
+      margin-right: $space30;
+    }
+  }
+
+  h5 {
+    margin-bottom: $space12;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 12px;
+    color: $white;
+    font-weight: 300;
+  }
+
+  .footer-nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .footer-nav-list li:not(:last-child) {
+    margin-bottom: $space6;
+  }
+
+  .footer-nav-list li a {
+    font-size: 12px;
+    color: $white;
+    font-weight: 300;
+    text-decoration: none;
+    display: inline-block;
+
+  }
+
+  .footer-nav-list li a:focus,
+  .footer-nav-list li a:hover,
+  .footer-nav-list li a:active {
+    text-decoration: none;
+  }
+
+  .form-group-icon {
+    .form-control {
+      padding-left: $space24;
+    }
+
+    .mat-button {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.5;
+      padding: $space6;
+      min-width: inherit;
+      line-height: 1;
+    }
+  }
+}

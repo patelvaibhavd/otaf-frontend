@@ -1,0 +1,755 @@
+// Intro section
+.intro-section {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  position: relative;
+  background: rgb(187, 237, 194);
+  background: linear-gradient(232deg, rgba(187, 237, 194, 1) 0%, rgba(153, 230, 169, 1) 15%, rgba(115, 197, 156, 1) 75%, rgba(69, 128, 118, 1) 100%);
+  overflow: hidden;
+
+  @media (max-width: $breakpoint-md) {
+    padding: 0;
+    background-image: url('/assets/images/intro-img-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 240px;
+    margin-top: 64px;
+  }
+  @media (max-width: $breakpoint-sm) {
+    margin-top: 56px;
+  }
+
+  .intro-content {
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+
+  h1 {
+    color: $white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: $space16;
+    line-height: 1.3;
+  }
+
+  .intro-right-img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    max-width: 40%;
+    transform: translateY(-50%);
+
+    @media (max-width: $breakpoint-md) {
+      position: relative;
+      max-width: 100%;
+      transform: none;
+      top: 0;
+      height: 100%;
+    }
+  }
+
+  .btn-play-icon {
+    box-shadow: none;
+    background: $primary;
+    position: absolute;
+    left: -36px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media (max-width: $breakpoint-md) {
+      left: auto;
+      right: 30%;
+    }
+  }
+
+  .desktop-img {
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+}
+
+// Jobs section
+.jobs-section {
+  padding-top: $space24;
+  padding-bottom: 55px;
+  border-bottom: 1px solid rgba(112, 112, 112, .3);
+  @media (max-width: $breakpoint-md) {
+    border-bottom: none;
+    padding-bottom: 0; 
+  }
+
+  .section-title {
+    @media (max-width: $breakpoint-md) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: $space16;
+    }
+
+    h2 {
+      color: $darkgray;
+      font-size: 58px;
+      font-weight: bold;
+      margin: 0 0 $space6;
+
+      @media (max-width: $breakpoint-md) {
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0;
+        line-height: 1.3;
+      }
+    }
+
+    p {
+      color: $darkgray;
+      margin-bottom: $space40;
+
+      @media (max-width: $breakpoint-md) {
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0 0 0 $space8;
+        line-height: 1.3;
+      }
+    }
+
+  }
+
+  .card-job {
+    text-align: center;
+    padding: $space24;
+    border-radius: 20px;
+    background: rgba($primary, 0.1);
+    box-shadow: none;
+    border: 3px solid transparent;
+    transition: $transition;
+    margin-bottom: $space30;
+
+    &:nth-child(odd) {
+      margin-top: 35px;
+
+      @media (max-width: $breakpoint-md) {
+        margin-top: 0;
+      }
+    }
+
+    &:hover {
+      border-color: $secondary;
+      transition: $transition;
+      box-shadow: $card-hover-shadow;
+    }
+
+    .mat-card-title {
+      font-size: 16px;
+      color: $dark-blue;
+      font-weight: bold;
+      margin-bottom: $space16;
+      word-break: break-all;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: $space8;
+    }
+
+    .headphone-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: -20px;
+      background-color: $primary;
+      background: url('/assets/images/headphone-icon.svg'), linear-gradient(180deg, rgba(187, 237, 194, 1) 0%, rgba(115, 197, 156, 1) 100%);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px, 100%;
+    }
+  }
+
+  .form-group-icon {
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
+  }
+
+  .btn-search {
+    box-shadow: none;
+    width: 52px;
+    height: 52px;
+
+    .mat-button-wrapper {
+      padding: 0;
+    }
+
+    .mat-icon {
+      font-size: 32px;
+      width: 32px;
+      height: 32px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+}
+
+// Tab section
+.tab-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @media (max-width: $breakpoint-md) {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    color: $dark-blue;
+    text-align: center;
+    margin-bottom: $space30;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 20px;
+      margin-bottom: $space24;
+    }
+  }
+
+  .btn-card-white {
+    font-size: 12px;
+    font-weight: 600;
+    background: $white;
+    border-radius: 50px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
+    padding: $space16 $space40;
+    color: $dark-blue;
+    line-height: 1;
+    border: 2px solid transparent;
+    transition: $transition;
+
+    .mat-button-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-svg-icon {
+      margin-right: $space8;
+
+      svg {
+        fill: $dark-blue;
+        width: 18px;
+      }
+    }
+
+    &.active,
+    &:hover,
+    &:active {
+      border-color: $secondary;
+      transition: $transition;
+      box-shadow: none;
+    }
+  }
+
+  .btn-card-group {
+    margin-bottom: $space40;
+  }
+
+  .masonry-with-columns {
+    max-height: 800px;
+    margin-bottom: $space40;
+
+    @media (max-width: $breakpoint-md) {
+      max-height: inherit;
+      margin-bottom: 0;
+    }
+  }
+
+  .card-image-action {
+    padding: 0;
+    border-radius: 20px;
+    box-shadow: $card-shadow;
+    transition: $transition;
+    margin-bottom: $space8;
+    width: 21%;
+    margin-right: 20px;
+
+    @media (max-width: $breakpoint-md) {
+      width: auto;
+      margin-bottom: $space30;
+    }
+
+    &.card-w-28 {
+      width: 28%;
+
+      @media (max-width: $breakpoint-md) {
+        width: auto;
+      }
+    }
+
+    .card-image-box {
+      position: relative;
+
+      .mat-card-md-image {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .card-overlay-logo {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        z-index: 2;
+
+        @media (max-width: $breakpoint-md) {
+          img {
+            width: 34px;
+          }
+        }
+      }
+
+      .card-warning-icon {
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50px;
+        background: $secondary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          fill: $white;
+          width: 20px;
+        }
+      }
+    }
+
+    .mat-card-footer {
+      margin: 0;
+      padding: $space12 $space24;
+      position: relative;
+
+      @media (max-width: $breakpoint-md) {
+        padding: $space8 $space16 $space30 $space16;
+        text-align: center;
+      }
+
+      .card-footer-body {
+        width: 78%;
+        padding-right: $space8;
+
+        @media (max-width: $breakpoint-md) {
+          width: 100%;
+          padding-right: 0;
+        }
+      }
+
+      .mat-card-title {
+        font-size: 14px;
+        line-height: 1.3;
+        font-weight: bold;
+        margin: 0 0 $space4;
+        color: $dark-blue;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        @media (max-width: $breakpoint-md) {
+          white-space: normal;
+        }
+      }
+
+      .mat-card-subtitle {
+        font-size: 10px;
+        margin: 0;
+        color: $dark-blue;
+        text-transform: uppercase;
+        line-height: 1.3;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        @media (max-width: $breakpoint-md) {
+          white-space: normal;
+        }
+      }
+
+      .btn-headphone-fab {
+        background: $primary;
+        background: linear-gradient(180deg, rgba(187, 237, 194, 1) 0%, rgba(115, 197, 156, 1) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: none;
+        width: 32px;
+        height: 32px;
+
+        @media (max-width: $breakpoint-md) {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -16px;
+          width: 40px;
+          height: 40px;
+        }
+
+        .mat-button-wrapper {
+          line-height: 1;
+
+          .mat-icon {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+
+    .card-hover-content {
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      background: rgba(66, 71, 94, 0.8);
+      padding: $space16;
+      transition: $transition;
+      border-radius: 20px 20px 0 0;
+
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
+
+      h5 {
+        font-size: 14px;
+        font-weight: bold;
+        color: $white;
+        margin: 0;
+        line-height: 1.3;
+      }
+
+      .card-hover-subtitle {
+        font-size: 10px;
+        line-height: 1.3;
+        font-weight: 300;
+        color: $white;
+        display: block;
+        margin-bottom: $space8;
+      }
+
+      h4 {
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+        margin-bottom: $space24;
+        line-height: 1.3;
+      }
+
+      .card-hover-desc {
+        font-size: 14px;
+        font-weight: 300;
+        color: $white;
+        line-height: 1.3;
+        max-height: 54px;
+        overflow: hidden;
+      }
+
+      .card-hover-bottom {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0 16px 16px;
+
+        .card-bottom-icon {
+          color: $white;
+
+          .mat-icon {
+            font-size: 18px;
+            width: 18px;
+            height: 18px;
+          }
+
+          &.share-icon {
+            margin-right: $space12;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: $card-hover-shadow;
+      transition: $transition;
+      background: rgba(66, 71, 94, 0.8);
+
+      .card-hover-content {
+        opacity: 1;
+        transition: $transition;
+      }
+
+      .mat-card-footer {
+
+        .mat-card-title,
+        .mat-card-subtitle {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.pagination-nav {
+  a {
+    color: #04987A;
+    opacity: .42;
+    font-size: 16px;
+    font-weight: 300;
+
+    &:hover,
+    &:active,
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
+
+// App and google store
+.appstore-section {
+  background: $darkgray;
+  padding: $space24 0;
+  text-align: center;
+
+  h3 {
+    color: $white;
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: $space24;
+  }
+
+  .app-store-icon {
+    display: inline-block;
+    img {
+      height: 40px;
+      display: block;
+    }
+  }
+}
+
+// Social media section
+.social-media-section {
+  background: rgba($lightgray, .1);
+  padding: $space40 0;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $space24 0;
+  }
+
+  h5 {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    color: $darkgray;
+
+    @media (max-width: $breakpoint-md) {
+      text-align: center;
+      margin-bottom: $space16;
+      font-size: 16px;
+      font-weight: 300;
+      padding:0 $space8;
+    }
+  }
+
+  .social-media-list {
+    a {
+      display: inline-block;
+      img {display: block;}
+
+      &:not(:last-child) {
+        margin-right: $space12;
+
+        @media (max-width: $breakpoint-md) {
+          margin-right: $space8;
+        }
+      }
+    }
+  }
+}
+
+// Media player
+.media-player-fixed {
+  background: rgb(187, 237, 194);
+  background: linear-gradient(232deg, rgba(187, 237, 194, 1) 0%, rgba(153, 230, 169, 1) 15%, rgba(115, 197, 156, 1) 75%, rgba(69, 128, 118, 1) 100%);
+  padding: $space8 $space24;
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 1074px;
+  border-radius: 40px 40px 0 0;
+
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
+
+  .media-song-name {
+    padding-right: $space16;
+  }
+
+  h5 {
+    font-size: 16px;
+    margin: 0 0 $space4;
+    color: $white;
+  }
+
+  p {
+    font-size: 11px;
+    margin: 0;
+    color: $white;
+    line-height: 1.3;
+    font-weight: 300;
+  }
+
+  .player-btn-group {
+    .mat-button.btn-volume:not(:last-child) {
+      margin-right: $space24;
+    }
+  }
+
+  .btn-shuffle,
+  .btn-repeat {
+    .mat-icon {
+      font-size: 16px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .btn-previous,
+  .btn-pause,
+  .btn-next {
+    .mat-icon {
+      font-size: 30px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .song-play-slider {
+    span {
+      font-size: 14px;
+      color: $white;
+      font-weight: 300;
+    }
+
+    .song-play-position {
+      width: 80%;
+      padding: 0;
+      height: 20px;
+
+      .mat-slider-wrapper {
+        top: 50%;
+      }
+
+      .mat-slider-track-background {
+        background: $primary;
+      }
+
+      .mat-slider-track-fill {
+        background: $secondary;
+      }
+
+      .mat-slider-thumb {
+        display: none;
+      }
+
+      .mat-slider-track-wrapper,
+      .mat-slider-track-background,
+      .mat-slider-track-fill {
+        height: 3px;
+      }
+    }
+  }
+
+  .song-edit {
+    padding: 0 $space24;
+    border-left: 1px solid rgba($white, 0.53);
+  }
+
+  .song-volume {
+    padding: 0 0 0 $space24;
+    border-left: 1px solid rgba($white, 0.53);
+  }
+
+  .btn-edit {
+    font-weight: bold;
+    font-size: 14px;
+    color: $white;
+    padding: 6px;
+    line-height: 1;
+
+    .mat-button-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-svg-icon {
+      margin-right: $space6;
+
+      svg {
+        width: 18px;
+        fill: $white;
+      }
+    }
+  }
+
+  .btn-volume {
+    padding: $space2;
+    color: #fff;
+    min-width: inherit;
+    line-height: 1;
+  }
+
+  .slider-volume {
+    padding: 0;
+    height: 20px;
+
+    .mat-slider-wrapper {
+      top: 50%;
+    }
+
+    .mat-slider-track-background {
+      background: #99999F;
+    }
+
+    .mat-slider-track-fill {
+      background: $white;
+    }
+
+    .mat-slider-thumb {
+      background: $white;
+      width: 12px;
+      height: 12px;
+      bottom: -6px;
+      right: -6px;
+    }
+
+    .mat-slider-track-wrapper,
+    .mat-slider-track-background,
+    .mat-slider-track-fill {
+      height: 3px;
+    }
+  }
+
+}
