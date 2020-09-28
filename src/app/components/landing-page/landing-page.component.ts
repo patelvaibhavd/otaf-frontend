@@ -36,9 +36,9 @@ export class LandingPageComponent implements OnInit {
 
   // Masonry options
   public myOptions: NgxMasonryOptions = {
-    gutter: 0,
-    percentPosition: true,
-    itemSelector: '.card-image-action'
+    gutter: 8,
+    horizontalOrder: true,
+    itemSelector: '.grid-item',
   };
 
   constructor() { }

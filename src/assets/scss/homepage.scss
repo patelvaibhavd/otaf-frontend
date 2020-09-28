@@ -294,11 +294,16 @@
 
   .masonry-with-columns {
     margin-bottom: $space40;
+    // height: 2000px !important;
 
     @media (max-width: $breakpoint-md) {
       height: auto !important;
       margin-bottom: 0;
       width: 100% !important;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: space-around;
     }
   }
 
@@ -308,11 +313,8 @@
     box-shadow: $card-shadow;
     transition: $transition;
     margin-bottom: $space8;
-    margin-right: 10px;
-    width: 205px;
 
     @media (max-width: $breakpoint-md) {
-      width: auto;
       margin-bottom: $space30;
       display: flex;
       flex-direction: column;
@@ -321,10 +323,20 @@
       top: auto !important;
     }
 
-    &.card-w-large {
-      width: 260px;
+    
+    &.grid-item {
+      // width: 200px;
+      width: 18%;
       @media (max-width: $breakpoint-md) {
-        width: auto;
+        width: 48%;
+      }
+    }
+
+    &.grid-item--width2 {
+      // width: 274px;
+      width: 28%;
+      @media (max-width: $breakpoint-md) {
+        width: 48%;
       }
     }
 
