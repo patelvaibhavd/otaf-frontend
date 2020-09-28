@@ -133,32 +133,52 @@
       <h2>2 656</h2>
       <p>emplois disponibles</p>
     </div>
-    <div fxLayout="row wrap" fxLayoutAlign="center start" fxLayoutGap="20px" fxLayoutGap.lt-md="10px">
-      <mat-card fxFlex="16" fxFlex.lt-md="25" fxFlex.lt-sm="45" class="card-job">
-        <mat-card-title>Nettoyage</mat-card-title>
-        <img mat-card-sm-image class="" src="/assets/images/nettoyage-icon.svg" alt="image">
-        <span class="headphone-icon"></span>
-      </mat-card>
-      <mat-card fxFlex="16" fxFlex.lt-md="25" fxFlex.lt-sm="45" class="card-job">
-        <mat-card-title>BTP</mat-card-title>
-        <img mat-card-sm-image class="" src="/assets/images/btp-icon.svg" alt="image">
-        <span class="headphone-icon"></span>
-      </mat-card>
-      <mat-card fxFlex="16" fxFlex.lt-md="25" fxFlex.lt-sm="45" class="card-job">
-        <mat-card-title>Restauration</mat-card-title>
-        <img mat-card-sm-image class="" src="/assets/images/restauration-icon.svg" alt="image">
-        <span class="headphone-icon"></span>
-      </mat-card>
-      <mat-card fxFlex="16" fxFlex.lt-md="25" fxFlex.lt-sm="45" class="card-job">
-        <mat-card-title>Tourisme</mat-card-title>
-        <img mat-card-sm-image class="" src="/assets/images/tourisme-icon.svg" alt="image">
-        <span class="headphone-icon"></span>
-      </mat-card>
-      <mat-card fxFlex="16" fxFlex.lt-md="25" fxFlex.lt-sm="45" class="card-job">
-        <mat-card-title>Logistique</mat-card-title>
-        <img mat-card-sm-image class="" src="/assets/images/logistique-icon.svg" alt="image">
-        <span class="headphone-icon"></span>
-      </mat-card>
+
+    <div *ngIf="pageLoad">
+      <owl-carousel-o [options]="carouselOptions" class="category-slider">
+        <ng-template carouselSlide>
+          <mat-card class="card-job">
+            <mat-card-title>Nettoyage</mat-card-title>
+            <img mat-card-sm-image class="" src="/assets/images/nettoyage-icon.svg" alt="image">
+            <span class="headphone-icon"></span>
+          </mat-card>
+        </ng-template>
+        <ng-template carouselSlide>
+          <mat-card class="card-job">
+            <mat-card-title>BTP</mat-card-title>
+            <img mat-card-sm-image class="" src="/assets/images/btp-icon.svg" alt="image">
+            <span class="headphone-icon"></span>
+          </mat-card>
+        </ng-template>
+        <ng-template carouselSlide>
+          <mat-card class="card-job">
+            <mat-card-title>Restauration</mat-card-title>
+            <img mat-card-sm-image class="" src="/assets/images/restauration-icon.svg" alt="image">
+            <span class="headphone-icon"></span>
+          </mat-card>
+        </ng-template>
+        <ng-template carouselSlide>
+          <mat-card class="card-job">
+            <mat-card-title>Tourisme</mat-card-title>
+            <img mat-card-sm-image class="" src="/assets/images/tourisme-icon.svg" alt="image">
+            <span class="headphone-icon"></span>
+          </mat-card>
+        </ng-template>
+        <ng-template carouselSlide>
+          <mat-card class="card-job">
+            <mat-card-title>Logistique</mat-card-title>
+            <img mat-card-sm-image class="" src="/assets/images/logistique-icon.svg" alt="image">
+            <span class="headphone-icon"></span>
+          </mat-card>
+        </ng-template>
+        <ng-template carouselSlide>
+          <mat-card class="card-job">
+            <mat-card-title>Logistique</mat-card-title>
+            <img mat-card-sm-image class="" src="/assets/images/logistique-icon.svg" alt="image">
+            <span class="headphone-icon"></span>
+          </mat-card>
+        </ng-template>
+      </owl-carousel-o>
     </div>
 
     <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutAlign="center center" fxLayoutGap="20px">
@@ -274,67 +294,69 @@
         <span>Voir la carte</span>
       </button>
     </div>
-    <div class="masonry-with-columns" fxLayout="column wrap" fxLayout.lt-md="row wrap" fxLayoutAlign="start start"
-      fxLayoutAlign.lt-md="center start" fxLayoutGap.lt-md="10px">
-      <mat-card fxFlex.lt-md="44.5" class="card-image-action">
-        <div class="card-image-box">
-          <span class="card-overlay-logo">
-            <img src="/assets/images/card-img-logo-1.png" width="50px" class="" alt="icon">
-          </span>
-          <img mat-card-md-image class="image" src="/assets/images/image-1.png" alt="image">
-          <div class="card-hover-content">
-            <h5>Barman</h5>
-            <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
-            <h4>1350€/mois</h4>
-            <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
-              sem urna, a mattis leo
-              gravida laoreet.</p>
-            <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
-              <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
-                <span class="btn-svg-icon">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                    enable-background="new 0 0 24 24" xml:space="preserve">
-                    <g id="Group_9767" transform="translate(0)">
-                      <path id="Path_1081"
-                        d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
+    <div *ngIf="pageLoad">
+      <ngx-masonry [options]="myOptions" [ordered]="false" class="masonry-with-columns" fxLayout="row wrap"
+        fxLayout.lt-md="row wrap" fxLayoutAlign="start start" fxLayoutAlign.lt-md="space-between strech"
+        fxLayoutGap.lt-md="10px">
+        <mat-card fxFlex.lt-md="46" class="card-image-action">
+          <div class="card-image-box">
+            <span class="card-overlay-logo">
+              <img src="/assets/images/card-img-logo-1.png" width="50px" class="" alt="icon">
+            </span>
+            <img mat-card-md-image class="image" src="/assets/images/image-1.png" alt="image">
+            <div class="card-hover-content">
+              <h5>Barman</h5>
+              <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
+              <h4>1350€/mois</h4>
+              <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
+                sem urna, a mattis leo
+                gravida laoreet.</p>
+              <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
+                  <span class="btn-svg-icon">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                      enable-background="new 0 0 24 24" xml:space="preserve">
+                      <g id="Group_9767" transform="translate(0)">
+                        <path id="Path_1081"
+                          d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
                    C18.2,1.4,17.3,1,16.3,1c-1,0-2,0.4-2.7,1.1l-9.7,9.7c-0.1,0.1-0.1,0.2-0.2,0.3l-1.2,5.7c0,0.2,0,0.4,0.2,0.6
                    C2.8,18.5,2.9,18.6,3.1,18.6z M16.3,2.2c1.4,0,2.6,1.2,2.6,2.6c0,0,0,0,0,0c0,0.7-0.3,1.3-0.7,1.8l-3.7-3.7
                    C14.9,2.5,15.6,2.2,16.3,2.2z M13.6,3.8l3.7,3.7l-8.5,8.4l-3.7-3.6L13.6,3.8z M4.7,13.5l2.9,2.9l-3.8,0.8L4.7,13.5z" />
-                      <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
+                        <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
                    C22.6,22.1,22.3,21.8,22,21.8z" />
-                    </g>
-                  </svg>
-                </span>
-                <span>Postuler</span>
-              </button>
-              <div class="">
-                <a href="javascript:void(0);" class="card-bottom-icon share-icon">
-                  <mat-icon>share</mat-icon>
-                </a>
-                <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
-                  <mat-icon>favorite_border</mat-icon>
-                </a>
+                      </g>
+                    </svg>
+                  </span>
+                  <span>Postuler</span>
+                </button>
+                <div class="">
+                  <a href="javascript:void(0);" class="card-bottom-icon share-icon">
+                    <mat-icon>share</mat-icon>
+                  </a>
+                  <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
+                    <mat-icon>favorite_border</mat-icon>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
-          <div class="card-footer-body">
-            <mat-card-title>Commis de cuisine</mat-card-title>
-            <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
-          </div>
-          <button mat-mini-fab color="secondary" class="btn-headphone-fab">
-            <span class="mat-icon">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                enable-background="new 0 0 24 24" xml:space="preserve">
-                <g id="Group_9715" transform="translate(0.267 0.267)">
-                  <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
+          <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
+            <div class="card-footer-body">
+              <mat-card-title>Commis de cuisine</mat-card-title>
+              <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
+            </div>
+            <button mat-mini-fab color="secondary" class="btn-headphone-fab">
+              <span class="mat-icon">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                  enable-background="new 0 0 24 24" xml:space="preserve">
+                  <g id="Group_9715" transform="translate(0.267 0.267)">
+                    <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
 		c0.8-0.8,0.8-2.2,0-3l0.5-0.6c1.1,1.1,1.1,2.9,0,4.1L7.7,16.7z" />
-                  <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
+                    <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
 		L11.8,20.8z" />
-                  <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
+                    <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
 		c0,0.1,0,0.2,0,0.4c1.1,0.5,1.8,1.6,1.8,2.8v2.8c0,1.7-1.4,3.1-3.1,3.1v0.7c0,0.2-0.2,0.3-0.3,0.3l0,0h-1.4c-0.2,0-0.3-0.2-0.3-0.3
 		l0,0V10c0-0.2,0.2-0.3,0.3-0.3l0,0h1c-0.6-3.9-4.4-6.6-8.3-6c-3.1,0.5-5.5,2.9-6,6h1c0.2,0,0.3,0.2,0.3,0.3l0,0v10.3
 		c0,0.2-0.2,0.3-0.3,0.3l0,0H4c-0.2,0-0.3-0.2-0.3-0.3l0,0v-0.7c-1.7,0-3.1-1.4-3.1-3.1v-2.8C0.6,12.6,1.3,11.5,2.4,11z M19.5,19
@@ -342,77 +364,77 @@
 		C4.2,5.6,8.2,2.5,12.5,3c3.6,0.4,6.5,3.3,6.9,6.9V10v0.2c0,0.2,0,0.4,0,0.5c0.2,0,0.4,0,0.6,0.1c0-0.1,0-0.1,0-0.2
 		c0-4.7-3.8-8.5-8.5-8.5S3,5.9,3,10.6c0,0.1,0,0.1,0,0.2c0.2,0,0.4-0.1,0.6-0.1c0-0.2,0-0.4,0-0.5V10C3.7,10,3.7,10,3.7,9.9L3.7,9.9
 		z M1.3,16.6c0,1.3,1.1,2.4,2.4,2.4v-7.6c-1.3,0-2.4,1.1-2.4,2.4V16.6z" />
-                  <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
+                    <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
 		C20.2,15.9,20.3,15.7,20.5,15.7L20.5,15.7z" />
-                  <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+                    <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
 		C20.2,14.5,20.3,14.4,20.5,14.4L20.5,14.4z" />
-                  <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+                    <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
 		C20.2,13.1,20.3,13,20.5,13L20.5,13z" />
-                </g>
-              </svg>
+                  </g>
+                </svg>
+              </span>
+            </button>
+          </mat-card-footer>
+        </mat-card>
+        <mat-card fxFlex.lt-md="46" class="card-image-action card-w-large">
+          <div class="card-image-box">
+            <span class="card-overlay-logo">
+              <img src="/assets/images/card-img-logo-2.png" width="50px" class="" alt="icon">
             </span>
-          </button>
-        </mat-card-footer>
-      </mat-card>
-      <mat-card fxFlex.lt-md="44.5" class="card-image-action">
-        <div class="card-image-box">
-          <span class="card-overlay-logo">
-            <img src="/assets/images/card-img-logo-3.png" width="50px" class="" alt="icon">
-          </span>
-          <img mat-card-md-image class="image" src="/assets/images/image-3.png" alt="image">
-          <div class="card-hover-content">
-            <h5>Barman</h5>
-            <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
-            <h4>1350€/mois</h4>
-            <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
-              sem urna, a mattis leo
-              gravida laoreet.</p>
-            <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
-              <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
-                <span class="btn-svg-icon">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                    enable-background="new 0 0 24 24" xml:space="preserve">
-                    <g id="Group_9767" transform="translate(0)">
-                      <path id="Path_1081"
-                        d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
+            <img mat-card-md-image class="image" src="/assets/images/image-2.png" alt="image">
+            <div class="card-hover-content">
+              <h5>Barman</h5>
+              <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
+              <h4>1350€/mois</h4>
+              <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
+                sem urna, a mattis leo
+                gravida laoreet.</p>
+              <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
+                  <span class="btn-svg-icon">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                      enable-background="new 0 0 24 24" xml:space="preserve">
+                      <g id="Group_9767" transform="translate(0)">
+                        <path id="Path_1081"
+                          d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
                    C18.2,1.4,17.3,1,16.3,1c-1,0-2,0.4-2.7,1.1l-9.7,9.7c-0.1,0.1-0.1,0.2-0.2,0.3l-1.2,5.7c0,0.2,0,0.4,0.2,0.6
                    C2.8,18.5,2.9,18.6,3.1,18.6z M16.3,2.2c1.4,0,2.6,1.2,2.6,2.6c0,0,0,0,0,0c0,0.7-0.3,1.3-0.7,1.8l-3.7-3.7
                    C14.9,2.5,15.6,2.2,16.3,2.2z M13.6,3.8l3.7,3.7l-8.5,8.4l-3.7-3.6L13.6,3.8z M4.7,13.5l2.9,2.9l-3.8,0.8L4.7,13.5z" />
-                      <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
+                        <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
                    C22.6,22.1,22.3,21.8,22,21.8z" />
-                    </g>
-                  </svg>
-                </span>
-                <span>Postuler</span>
-              </button>
-              <div class="">
-                <a href="javascript:void(0);" class="card-bottom-icon share-icon">
-                  <mat-icon>share</mat-icon>
-                </a>
-                <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
-                  <mat-icon>favorite_border</mat-icon>
-                </a>
+                      </g>
+                    </svg>
+                  </span>
+                  <span>Postuler</span>
+                </button>
+                <div class="">
+                  <a href="javascript:void(0);" class="card-bottom-icon share-icon">
+                    <mat-icon>share</mat-icon>
+                  </a>
+                  <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
+                    <mat-icon>favorite_border</mat-icon>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
-          <div class="card-footer-body">
-            <mat-card-title>Ascensoriste</mat-card-title>
-            <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
-          </div>
-          <button mat-mini-fab color="secondary" class="btn-headphone-fab">
-            <span class="mat-icon">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                enable-background="new 0 0 24 24" xml:space="preserve">
-                <g id="Group_9715" transform="translate(0.267 0.267)">
-                  <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
+          <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
+            <div class="card-footer-body">
+              <mat-card-title>Pizzaiolo</mat-card-title>
+              <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
+            </div>
+            <button mat-mini-fab color="secondary" class="btn-headphone-fab">
+              <span class="mat-icon">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                  enable-background="new 0 0 24 24" xml:space="preserve">
+                  <g id="Group_9715" transform="translate(0.267 0.267)">
+                    <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
 		c0.8-0.8,0.8-2.2,0-3l0.5-0.6c1.1,1.1,1.1,2.9,0,4.1L7.7,16.7z" />
-                  <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
+                    <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
 		L11.8,20.8z" />
-                  <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
+                    <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
 		c0,0.1,0,0.2,0,0.4c1.1,0.5,1.8,1.6,1.8,2.8v2.8c0,1.7-1.4,3.1-3.1,3.1v0.7c0,0.2-0.2,0.3-0.3,0.3l0,0h-1.4c-0.2,0-0.3-0.2-0.3-0.3
 		l0,0V10c0-0.2,0.2-0.3,0.3-0.3l0,0h1c-0.6-3.9-4.4-6.6-8.3-6c-3.1,0.5-5.5,2.9-6,6h1c0.2,0,0.3,0.2,0.3,0.3l0,0v10.3
 		c0,0.2-0.2,0.3-0.3,0.3l0,0H4c-0.2,0-0.3-0.2-0.3-0.3l0,0v-0.7c-1.7,0-3.1-1.4-3.1-3.1v-2.8C0.6,12.6,1.3,11.5,2.4,11z M19.5,19
@@ -420,77 +442,77 @@
 		C4.2,5.6,8.2,2.5,12.5,3c3.6,0.4,6.5,3.3,6.9,6.9V10v0.2c0,0.2,0,0.4,0,0.5c0.2,0,0.4,0,0.6,0.1c0-0.1,0-0.1,0-0.2
 		c0-4.7-3.8-8.5-8.5-8.5S3,5.9,3,10.6c0,0.1,0,0.1,0,0.2c0.2,0,0.4-0.1,0.6-0.1c0-0.2,0-0.4,0-0.5V10C3.7,10,3.7,10,3.7,9.9L3.7,9.9
 		z M1.3,16.6c0,1.3,1.1,2.4,2.4,2.4v-7.6c-1.3,0-2.4,1.1-2.4,2.4V16.6z" />
-                  <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
+                    <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
 		C20.2,15.9,20.3,15.7,20.5,15.7L20.5,15.7z" />
-                  <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+                    <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
 		C20.2,14.5,20.3,14.4,20.5,14.4L20.5,14.4z" />
-                  <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+                    <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
 		C20.2,13.1,20.3,13,20.5,13L20.5,13z" />
-                </g>
-              </svg>
+                  </g>
+                </svg>
+              </span>
+            </button>
+          </mat-card-footer>
+        </mat-card>
+        <mat-card fxFlex.lt-md="46" class="card-image-action">
+          <div class="card-image-box">
+            <span class="card-overlay-logo">
+              <img src="/assets/images/card-img-logo-3.png" width="50px" class="" alt="icon">
             </span>
-          </button>
-        </mat-card-footer>
-      </mat-card>
-      <mat-card fxFlex.lt-md="44.5" class="card-image-action card-w-28">
-        <div class="card-image-box">
-          <span class="card-overlay-logo">
-            <img src="/assets/images/card-img-logo-2.png" width="50px" class="" alt="icon">
-          </span>
-          <img mat-card-md-image class="image" src="/assets/images/image-2.png" alt="image">
-          <div class="card-hover-content">
-            <h5>Barman</h5>
-            <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
-            <h4>1350€/mois</h4>
-            <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
-              sem urna, a mattis leo
-              gravida laoreet.</p>
-            <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
-              <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
-                <span class="btn-svg-icon">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                    enable-background="new 0 0 24 24" xml:space="preserve">
-                    <g id="Group_9767" transform="translate(0)">
-                      <path id="Path_1081"
-                        d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
+            <img mat-card-md-image class="image" src="/assets/images/image-3.png" alt="image">
+            <div class="card-hover-content">
+              <h5>Barman</h5>
+              <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
+              <h4>1350€/mois</h4>
+              <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
+                sem urna, a mattis leo
+                gravida laoreet.</p>
+              <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
+                  <span class="btn-svg-icon">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                      enable-background="new 0 0 24 24" xml:space="preserve">
+                      <g id="Group_9767" transform="translate(0)">
+                        <path id="Path_1081"
+                          d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
                    C18.2,1.4,17.3,1,16.3,1c-1,0-2,0.4-2.7,1.1l-9.7,9.7c-0.1,0.1-0.1,0.2-0.2,0.3l-1.2,5.7c0,0.2,0,0.4,0.2,0.6
                    C2.8,18.5,2.9,18.6,3.1,18.6z M16.3,2.2c1.4,0,2.6,1.2,2.6,2.6c0,0,0,0,0,0c0,0.7-0.3,1.3-0.7,1.8l-3.7-3.7
                    C14.9,2.5,15.6,2.2,16.3,2.2z M13.6,3.8l3.7,3.7l-8.5,8.4l-3.7-3.6L13.6,3.8z M4.7,13.5l2.9,2.9l-3.8,0.8L4.7,13.5z" />
-                      <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
+                        <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
                    C22.6,22.1,22.3,21.8,22,21.8z" />
-                    </g>
-                  </svg>
-                </span>
-                <span>Postuler</span>
-              </button>
-              <div class="">
-                <a href="javascript:void(0);" class="card-bottom-icon share-icon">
-                  <mat-icon>share</mat-icon>
-                </a>
-                <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
-                  <mat-icon>favorite_border</mat-icon>
-                </a>
+                      </g>
+                    </svg>
+                  </span>
+                  <span>Postuler</span>
+                </button>
+                <div class="">
+                  <a href="javascript:void(0);" class="card-bottom-icon share-icon">
+                    <mat-icon>share</mat-icon>
+                  </a>
+                  <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
+                    <mat-icon>favorite_border</mat-icon>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
-          <div class="card-footer-body">
-            <mat-card-title>Pizzaiolo</mat-card-title>
-            <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
-          </div>
-          <button mat-mini-fab color="secondary" class="btn-headphone-fab">
-            <span class="mat-icon">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                enable-background="new 0 0 24 24" xml:space="preserve">
-                <g id="Group_9715" transform="translate(0.267 0.267)">
-                  <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
+          <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
+            <div class="card-footer-body">
+              <mat-card-title>Ascensoriste</mat-card-title>
+              <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
+            </div>
+            <button mat-mini-fab color="secondary" class="btn-headphone-fab">
+              <span class="mat-icon">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                  enable-background="new 0 0 24 24" xml:space="preserve">
+                  <g id="Group_9715" transform="translate(0.267 0.267)">
+                    <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
 		c0.8-0.8,0.8-2.2,0-3l0.5-0.6c1.1,1.1,1.1,2.9,0,4.1L7.7,16.7z" />
-                  <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
+                    <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
 		L11.8,20.8z" />
-                  <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
+                    <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
 		c0,0.1,0,0.2,0,0.4c1.1,0.5,1.8,1.6,1.8,2.8v2.8c0,1.7-1.4,3.1-3.1,3.1v0.7c0,0.2-0.2,0.3-0.3,0.3l0,0h-1.4c-0.2,0-0.3-0.2-0.3-0.3
 		l0,0V10c0-0.2,0.2-0.3,0.3-0.3l0,0h1c-0.6-3.9-4.4-6.6-8.3-6c-3.1,0.5-5.5,2.9-6,6h1c0.2,0,0.3,0.2,0.3,0.3l0,0v10.3
 		c0,0.2-0.2,0.3-0.3,0.3l0,0H4c-0.2,0-0.3-0.2-0.3-0.3l0,0v-0.7c-1.7,0-3.1-1.4-3.1-3.1v-2.8C0.6,12.6,1.3,11.5,2.4,11z M19.5,19
@@ -498,194 +520,119 @@
 		C4.2,5.6,8.2,2.5,12.5,3c3.6,0.4,6.5,3.3,6.9,6.9V10v0.2c0,0.2,0,0.4,0,0.5c0.2,0,0.4,0,0.6,0.1c0-0.1,0-0.1,0-0.2
 		c0-4.7-3.8-8.5-8.5-8.5S3,5.9,3,10.6c0,0.1,0,0.1,0,0.2c0.2,0,0.4-0.1,0.6-0.1c0-0.2,0-0.4,0-0.5V10C3.7,10,3.7,10,3.7,9.9L3.7,9.9
 		z M1.3,16.6c0,1.3,1.1,2.4,2.4,2.4v-7.6c-1.3,0-2.4,1.1-2.4,2.4V16.6z" />
-                  <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
+                    <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
 		C20.2,15.9,20.3,15.7,20.5,15.7L20.5,15.7z" />
-                  <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+                    <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
 		C20.2,14.5,20.3,14.4,20.5,14.4L20.5,14.4z" />
-                  <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+                    <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
 		C20.2,13.1,20.3,13,20.5,13L20.5,13z" />
-                </g>
-              </svg>
-            </span>
-          </button>
-        </mat-card-footer>
-      </mat-card>
-      <mat-card fxFlex.lt-md="44.5" class="card-image-action  card-w-28">
-        <div class="card-image-box">
-          <img mat-card-md-image class="image" src="/assets/images/image-4.png" alt="image">
-          <div class="card-hover-content">
-            <h5>Barman</h5>
-            <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
-            <h4>1350€/mois</h4>
-            <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
-              sem urna, a mattis leo
-              gravida laoreet.</p>
-            <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
-              <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
-                <span class="btn-svg-icon">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                    enable-background="new 0 0 24 24" xml:space="preserve">
-                    <g id="Group_9767" transform="translate(0)">
-                      <path id="Path_1081"
-                        d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
-                   C18.2,1.4,17.3,1,16.3,1c-1,0-2,0.4-2.7,1.1l-9.7,9.7c-0.1,0.1-0.1,0.2-0.2,0.3l-1.2,5.7c0,0.2,0,0.4,0.2,0.6
-                   C2.8,18.5,2.9,18.6,3.1,18.6z M16.3,2.2c1.4,0,2.6,1.2,2.6,2.6c0,0,0,0,0,0c0,0.7-0.3,1.3-0.7,1.8l-3.7-3.7
-                   C14.9,2.5,15.6,2.2,16.3,2.2z M13.6,3.8l3.7,3.7l-8.5,8.4l-3.7-3.6L13.6,3.8z M4.7,13.5l2.9,2.9l-3.8,0.8L4.7,13.5z" />
-                      <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
-                   C22.6,22.1,22.3,21.8,22,21.8z" />
-                    </g>
-                  </svg>
-                </span>
-                <span>Postuler</span>
-              </button>
-              <div class="">
-                <a href="javascript:void(0);" class="card-bottom-icon share-icon">
-                  <mat-icon>share</mat-icon>
-                </a>
-                <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
-                  <mat-icon>favorite_border</mat-icon>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
-          <div class="card-footer-body">
-            <mat-card-title>Chef d'atelier</mat-card-title>
-            <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
-          </div>
-          <button mat-mini-fab color="secondary" class="btn-headphone-fab">
-            <span class="mat-icon">
+                  </g>
+                </svg>
+              </span>
+            </button>
+          </mat-card-footer>
+        </mat-card>
+        <mat-card fxFlex.lt-md="46" class="card-image-action">
+          <div class="card-image-box">
+            <span class="card-warning-icon">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
                 enable-background="new 0 0 24 24" xml:space="preserve">
-                <g id="Group_9715" transform="translate(0.267 0.267)">
-                  <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
-		c0.8-0.8,0.8-2.2,0-3l0.5-0.6c1.1,1.1,1.1,2.9,0,4.1L7.7,16.7z" />
-                  <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
-		L11.8,20.8z" />
-                  <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
-		c0,0.1,0,0.2,0,0.4c1.1,0.5,1.8,1.6,1.8,2.8v2.8c0,1.7-1.4,3.1-3.1,3.1v0.7c0,0.2-0.2,0.3-0.3,0.3l0,0h-1.4c-0.2,0-0.3-0.2-0.3-0.3
-		l0,0V10c0-0.2,0.2-0.3,0.3-0.3l0,0h1c-0.6-3.9-4.4-6.6-8.3-6c-3.1,0.5-5.5,2.9-6,6h1c0.2,0,0.3,0.2,0.3,0.3l0,0v10.3
-		c0,0.2-0.2,0.3-0.3,0.3l0,0H4c-0.2,0-0.3-0.2-0.3-0.3l0,0v-0.7c-1.7,0-3.1-1.4-3.1-3.1v-2.8C0.6,12.6,1.3,11.5,2.4,11z M19.5,19
-		c1.3,0,2.4-1.1,2.4-2.4v-2.8c0-1.3-1.1-2.4-2.4-2.4V19z M18.1,10.4V20h0.7v-9.6H18.1z M4.4,20H5v-9.6H4.4V20z M3.7,9.9
-		C4.2,5.6,8.2,2.5,12.5,3c3.6,0.4,6.5,3.3,6.9,6.9V10v0.2c0,0.2,0,0.4,0,0.5c0.2,0,0.4,0,0.6,0.1c0-0.1,0-0.1,0-0.2
-		c0-4.7-3.8-8.5-8.5-8.5S3,5.9,3,10.6c0,0.1,0,0.1,0,0.2c0.2,0,0.4-0.1,0.6-0.1c0-0.2,0-0.4,0-0.5V10C3.7,10,3.7,10,3.7,9.9L3.7,9.9
-		z M1.3,16.6c0,1.3,1.1,2.4,2.4,2.4v-7.6c-1.3,0-2.4,1.1-2.4,2.4V16.6z" />
-                  <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
-		C20.2,15.9,20.3,15.7,20.5,15.7L20.5,15.7z" />
-                  <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
-		C20.2,14.5,20.3,14.4,20.5,14.4L20.5,14.4z" />
-                  <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
-		C20.2,13.1,20.3,13,20.5,13L20.5,13z" />
-                </g>
-              </svg>
-            </span>
-          </button>
-        </mat-card-footer>
-      </mat-card>
-      <mat-card fxFlex.lt-md="44.5" class="card-image-action">
-        <div class="card-image-box">
-          <span class="card-warning-icon">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-              enable-background="new 0 0 24 24" xml:space="preserve">
-              <g id="alarm" transform="translate(0)">
-                <path id="Path_892" d="M19,22.4l-1.1-3.2c-0.1-0.2-0.2-0.3-0.4-0.3h-0.1v-6.2c0-3-2.4-5.5-5.4-5.5c-3,0-5.5,2.4-5.5,5.4
+                <g id="alarm" transform="translate(0)">
+                  <path id="Path_892" d="M19,22.4l-1.1-3.2c-0.1-0.2-0.2-0.3-0.4-0.3h-0.1v-6.2c0-3-2.4-5.5-5.4-5.5c-3,0-5.5,2.4-5.5,5.4
 		c0,0,0,0.1,0,0.1V19H6.5c-0.2,0-0.3,0.1-0.4,0.3L5,22.4c-0.1,0.2,0,0.5,0.3,0.5c0,0,0.1,0,0.1,0h13.2c0.2,0,0.4-0.2,0.4-0.4
 		C19,22.5,19,22.5,19,22.4L19,22.4z M7.4,12.7c0-2.5,2.1-4.6,4.6-4.6c2.5,0,4.6,2.1,4.6,4.6V19H7.4V12.7z M6,22.1l0.8-2.3h10.4
 		l0.8,2.3H6z" />
-                <path id="Path_893" d="M12,1c-0.2,0-0.4,0.2-0.4,0.4V4c0,0.2,0.2,0.4,0.4,0.4c0.2,0,0.4-0.2,0.4-0.4V1.4C12.4,1.2,12.2,1,12,1
+                  <path id="Path_893" d="M12,1c-0.2,0-0.4,0.2-0.4,0.4V4c0,0.2,0.2,0.4,0.4,0.4c0.2,0,0.4-0.2,0.4-0.4V1.4C12.4,1.2,12.2,1,12,1
 		C12,1,12,1,12,1z" />
-                <path id="Path_894" d="M12.3,5.4c-0.2-0.2-0.4-0.2-0.6,0c-0.2,0.2-0.2,0.4,0,0.6c0.2,0.2,0.4,0.2,0.6,0c0.1-0.1,0.1-0.2,0.1-0.3
+                  <path id="Path_894" d="M12.3,5.4c-0.2-0.2-0.4-0.2-0.6,0c-0.2,0.2-0.2,0.4,0,0.6c0.2,0.2,0.4,0.2,0.6,0c0.1-0.1,0.1-0.2,0.1-0.3
 		C12.4,5.6,12.4,5.5,12.3,5.4z" />
-                <path id="Path_895" d="M5.1,12.5h-2c-0.2,0-0.4,0.2-0.4,0.4c0,0.2,0.2,0.4,0.4,0.4h2c0.2,0,0.4-0.2,0.4-0.4
+                  <path id="Path_895" d="M5.1,12.5h-2c-0.2,0-0.4,0.2-0.4,0.4c0,0.2,0.2,0.4,0.4,0.4h2c0.2,0,0.4-0.2,0.4-0.4
 		C5.5,12.7,5.3,12.5,5.1,12.5z" />
-                <path id="Path_896" d="M1.7,12.6c-0.2-0.2-0.4-0.2-0.6,0c-0.2,0.2-0.2,0.4,0,0.6c0.1,0.1,0.2,0.1,0.3,0.1c0.2,0,0.4-0.2,0.4-0.4
+                  <path id="Path_896" d="M1.7,12.6c-0.2-0.2-0.4-0.2-0.6,0c-0.2,0.2-0.2,0.4,0,0.6c0.1,0.1,0.2,0.1,0.3,0.1c0.2,0,0.4-0.2,0.4-0.4
 		C1.9,12.8,1.8,12.7,1.7,12.6L1.7,12.6z" />
-                <path id="Path_897" d="M9.1,4.8L8.5,3.4C8.4,3.2,8.2,3.1,8,3.2C7.7,3.3,7.6,3.5,7.7,3.7l0,0l0.6,1.4c0.1,0.2,0.3,0.3,0.6,0.2
+                  <path id="Path_897" d="M9.1,4.8L8.5,3.4C8.4,3.2,8.2,3.1,8,3.2C7.7,3.3,7.6,3.5,7.7,3.7l0,0l0.6,1.4c0.1,0.2,0.3,0.3,0.6,0.2
 		C9.1,5.3,9.2,5,9.1,4.8L9.1,4.8z" />
-                <path id="Path_898" d="M4.2,9.2L2.8,8.7c-0.2-0.1-0.5,0-0.6,0.2c-0.1,0.2,0,0.5,0.2,0.6L3.9,10c0.2,0.1,0.5,0,0.6-0.2
+                  <path id="Path_898" d="M4.2,9.2L2.8,8.7c-0.2-0.1-0.5,0-0.6,0.2c-0.1,0.2,0,0.5,0.2,0.6L3.9,10c0.2,0.1,0.5,0,0.6-0.2
 		C4.5,9.6,4.4,9.3,4.2,9.2L4.2,9.2z" />
-                <path id="Path_899" d="M21,12.5h-2c-0.2,0-0.4,0.2-0.4,0.4c0,0.2,0.2,0.4,0.4,0.4h2c0.2,0,0.4-0.2,0.4-0.4
+                  <path id="Path_899" d="M21,12.5h-2c-0.2,0-0.4,0.2-0.4,0.4c0,0.2,0.2,0.4,0.4,0.4h2c0.2,0,0.4-0.2,0.4-0.4
 		C21.5,12.7,21.3,12.5,21,12.5z" />
-                <path id="Path_900" d="M22.9,12.6c-0.2-0.2-0.4-0.2-0.6,0c-0.2,0.2-0.2,0.4,0,0.6c0.2,0.2,0.4,0.2,0.6,0C23,13.2,23,13,23,12.9
+                  <path id="Path_900" d="M22.9,12.6c-0.2-0.2-0.4-0.2-0.6,0c-0.2,0.2-0.2,0.4,0,0.6c0.2,0.2,0.4,0.2,0.6,0C23,13.2,23,13,23,12.9
 		C23,12.8,23,12.7,22.9,12.6z" />
-                <path id="Path_901" d="M20.5,4.4c-0.2-0.2-0.4-0.2-0.6,0l-2.1,2.1c-0.2,0.2-0.2,0.4,0,0.6c0.2,0.2,0.4,0.2,0.6,0L20.5,5
+                  <path id="Path_901" d="M20.5,4.4c-0.2-0.2-0.4-0.2-0.6,0l-2.1,2.1c-0.2,0.2-0.2,0.4,0,0.6c0.2,0.2,0.4,0.2,0.6,0L20.5,5
 		C20.7,4.9,20.7,4.6,20.5,4.4z" />
-                <path id="Path_902"
-                  d="M6.2,6.5L4.1,4.4c-0.2-0.2-0.4-0.2-0.6,0S3.3,4.9,3.5,5l2.1,2.1c0.2,0.2,0.4,0.2,0.6,0S6.4,6.7,6.2,6.5z" />
-                <path id="Path_903" d="M16,3.2c-0.2-0.1-0.5,0-0.6,0.2l-0.6,1.4c-0.1,0.2,0,0.5,0.2,0.6c0.2,0.1,0.5,0,0.6-0.2l0,0l0.6-1.4
+                  <path id="Path_902"
+                    d="M6.2,6.5L4.1,4.4c-0.2-0.2-0.4-0.2-0.6,0S3.3,4.9,3.5,5l2.1,2.1c0.2,0.2,0.4,0.2,0.6,0S6.4,6.7,6.2,6.5z" />
+                  <path id="Path_903" d="M16,3.2c-0.2-0.1-0.5,0-0.6,0.2l-0.6,1.4c-0.1,0.2,0,0.5,0.2,0.6c0.2,0.1,0.5,0,0.6-0.2l0,0l0.6-1.4
 		C16.4,3.5,16.3,3.3,16,3.2C16,3.2,16,3.2,16,3.2z" />
-                <path id="Path_904" d="M21.7,8.9c-0.1-0.2-0.3-0.3-0.6-0.2l-1.4,0.6c-0.2,0.1-0.3,0.3-0.2,0.6c0.1,0.2,0.3,0.3,0.6,0.2l1.4-0.6
+                  <path id="Path_904" d="M21.7,8.9c-0.1-0.2-0.3-0.3-0.6-0.2l-1.4,0.6c-0.2,0.1-0.3,0.3-0.2,0.6c0.1,0.2,0.3,0.3,0.6,0.2l1.4-0.6
 		C21.7,9.4,21.8,9.1,21.7,8.9z" />
-                <path id="Path_905" d="M12,10c-0.7,0-1.3,0.6-1.3,1.3v2.1c0,0.7,0.6,1.3,1.3,1.3s1.3-0.6,1.3-1.3c0,0,0,0,0,0v-2.1
+                  <path id="Path_905" d="M12,10c-0.7,0-1.3,0.6-1.3,1.3v2.1c0,0.7,0.6,1.3,1.3,1.3s1.3-0.6,1.3-1.3c0,0,0,0,0,0v-2.1
 		C13.3,10.6,12.7,10,12,10z M12.4,13.3c0,0.2-0.2,0.4-0.4,0.4c-0.2,0-0.4-0.2-0.4-0.4v-2.1c0-0.2,0.2-0.4,0.4-0.4
 		c0.2,0,0.4,0.2,0.4,0.4V13.3z" />
-                <path id="Path_906" d="M12,15.5c-0.7,0-1.3,0.6-1.3,1.3c0,0.7,0.6,1.3,1.3,1.3c0.7,0,1.3-0.6,1.3-1.3C13.3,16.1,12.7,15.5,12,15.5z
+                  <path id="Path_906" d="M12,15.5c-0.7,0-1.3,0.6-1.3,1.3c0,0.7,0.6,1.3,1.3,1.3c0.7,0,1.3-0.6,1.3-1.3C13.3,16.1,12.7,15.5,12,15.5z
 		 M12,17.2c-0.2,0-0.4-0.2-0.4-0.4c0-0.2,0.2-0.4,0.4-0.4c0.2,0,0.4,0.2,0.4,0.4C12.4,17,12.2,17.2,12,17.2L12,17.2z" />
-              </g>
-            </svg>
-          </span>
+                </g>
+              </svg>
+            </span>
 
-          <span class="card-overlay-logo">
-            <img src="/assets/images/card-img-logo-1.png" width="50px" class="" alt="icon">
-          </span>
-          <img mat-card-md-image class="image" src="/assets/images/image-1.png" alt="image">
-          <div class="card-hover-content">
-            <h5>Barman</h5>
-            <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
-            <h4>1350€/mois</h4>
-            <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
-              sem urna, a mattis leo
-              gravida laoreet.</p>
-            <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
-              <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
-                <span class="btn-svg-icon">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                    enable-background="new 0 0 24 24" xml:space="preserve">
-                    <g id="Group_9767" transform="translate(0)">
-                      <path id="Path_1081"
-                        d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
+            <span class="card-overlay-logo">
+              <img src="/assets/images/card-img-logo-1.png" width="50px" class="" alt="icon">
+            </span>
+            <img mat-card-md-image class="image" src="/assets/images/image-1.png" alt="image">
+            <div class="card-hover-content">
+              <h5>Barman</h5>
+              <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
+              <h4>1350€/mois</h4>
+              <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
+                sem urna, a mattis leo
+                gravida laoreet.</p>
+              <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
+                  <span class="btn-svg-icon">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                      enable-background="new 0 0 24 24" xml:space="preserve">
+                      <g id="Group_9767" transform="translate(0)">
+                        <path id="Path_1081"
+                          d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
                    C18.2,1.4,17.3,1,16.3,1c-1,0-2,0.4-2.7,1.1l-9.7,9.7c-0.1,0.1-0.1,0.2-0.2,0.3l-1.2,5.7c0,0.2,0,0.4,0.2,0.6
                    C2.8,18.5,2.9,18.6,3.1,18.6z M16.3,2.2c1.4,0,2.6,1.2,2.6,2.6c0,0,0,0,0,0c0,0.7-0.3,1.3-0.7,1.8l-3.7-3.7
                    C14.9,2.5,15.6,2.2,16.3,2.2z M13.6,3.8l3.7,3.7l-8.5,8.4l-3.7-3.6L13.6,3.8z M4.7,13.5l2.9,2.9l-3.8,0.8L4.7,13.5z" />
-                      <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
+                        <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
                    C22.6,22.1,22.3,21.8,22,21.8z" />
-                    </g>
-                  </svg>
-                </span>
-                <span>Postuler</span>
-              </button>
-              <div class="">
-                <a href="javascript:void(0);" class="card-bottom-icon share-icon">
-                  <mat-icon>share</mat-icon>
-                </a>
-                <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
-                  <mat-icon>favorite_border</mat-icon>
-                </a>
+                      </g>
+                    </svg>
+                  </span>
+                  <span>Postuler</span>
+                </button>
+                <div class="">
+                  <a href="javascript:void(0);" class="card-bottom-icon share-icon">
+                    <mat-icon>share</mat-icon>
+                  </a>
+                  <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
+                    <mat-icon>favorite_border</mat-icon>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
-          <div class="card-footer-body">
-            <mat-card-title>Commis de cuisine</mat-card-title>
-            <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
-          </div>
-          <button mat-mini-fab color="secondary" class="btn-headphone-fab">
-            <span class="mat-icon">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                enable-background="new 0 0 24 24" xml:space="preserve">
-                <g id="Group_9715" transform="translate(0.267 0.267)">
-                  <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
+          <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
+            <div class="card-footer-body">
+              <mat-card-title>Commis de cuisine</mat-card-title>
+              <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
+            </div>
+            <button mat-mini-fab color="secondary" class="btn-headphone-fab">
+              <span class="mat-icon">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                  enable-background="new 0 0 24 24" xml:space="preserve">
+                  <g id="Group_9715" transform="translate(0.267 0.267)">
+                    <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
 		c0.8-0.8,0.8-2.2,0-3l0.5-0.6c1.1,1.1,1.1,2.9,0,4.1L7.7,16.7z" />
-                  <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
+                    <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
 		L11.8,20.8z" />
-                  <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
+                    <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
 		c0,0.1,0,0.2,0,0.4c1.1,0.5,1.8,1.6,1.8,2.8v2.8c0,1.7-1.4,3.1-3.1,3.1v0.7c0,0.2-0.2,0.3-0.3,0.3l0,0h-1.4c-0.2,0-0.3-0.2-0.3-0.3
 		l0,0V10c0-0.2,0.2-0.3,0.3-0.3l0,0h1c-0.6-3.9-4.4-6.6-8.3-6c-3.1,0.5-5.5,2.9-6,6h1c0.2,0,0.3,0.2,0.3,0.3l0,0v10.3
 		c0,0.2-0.2,0.3-0.3,0.3l0,0H4c-0.2,0-0.3-0.2-0.3-0.3l0,0v-0.7c-1.7,0-3.1-1.4-3.1-3.1v-2.8C0.6,12.6,1.3,11.5,2.4,11z M19.5,19
@@ -693,77 +640,77 @@
 		C4.2,5.6,8.2,2.5,12.5,3c3.6,0.4,6.5,3.3,6.9,6.9V10v0.2c0,0.2,0,0.4,0,0.5c0.2,0,0.4,0,0.6,0.1c0-0.1,0-0.1,0-0.2
 		c0-4.7-3.8-8.5-8.5-8.5S3,5.9,3,10.6c0,0.1,0,0.1,0,0.2c0.2,0,0.4-0.1,0.6-0.1c0-0.2,0-0.4,0-0.5V10C3.7,10,3.7,10,3.7,9.9L3.7,9.9
 		z M1.3,16.6c0,1.3,1.1,2.4,2.4,2.4v-7.6c-1.3,0-2.4,1.1-2.4,2.4V16.6z" />
-                  <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
+                    <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
 		C20.2,15.9,20.3,15.7,20.5,15.7L20.5,15.7z" />
-                  <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+                    <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
 		C20.2,14.5,20.3,14.4,20.5,14.4L20.5,14.4z" />
-                  <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+                    <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
 		C20.2,13.1,20.3,13,20.5,13L20.5,13z" />
-                </g>
-              </svg>
+                  </g>
+                </svg>
+              </span>
+            </button>
+          </mat-card-footer>
+        </mat-card>
+        <mat-card fxFlex.lt-md="46" class="card-image-action">
+          <div class="card-image-box">
+            <span class="card-overlay-logo">
+              <img src="/assets/images/card-img-logo-4.png" width="50px" class="" alt="icon">
             </span>
-          </button>
-        </mat-card-footer>
-      </mat-card>
-      <mat-card fxFlex.lt-md="44.5" class="card-image-action">
-        <div class="card-image-box">
-          <span class="card-overlay-logo">
-            <img src="/assets/images/card-img-logo-4.png" width="50px" class="" alt="icon">
-          </span>
-          <img mat-card-md-image class="image" src="/assets/images/image-5.png" alt="image">
-          <div class="card-hover-content">
-            <h5>Barman</h5>
-            <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
-            <h4>1350€/mois</h4>
-            <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
-              sem urna, a mattis leo
-              gravida laoreet.</p>
-            <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
-              <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
-                <span class="btn-svg-icon">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                    enable-background="new 0 0 24 24" xml:space="preserve">
-                    <g id="Group_9767" transform="translate(0)">
-                      <path id="Path_1081"
-                        d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
+            <img mat-card-md-image class="image" src="/assets/images/image-5.png" alt="image">
+            <div class="card-hover-content">
+              <h5>Barman</h5>
+              <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
+              <h4>1350€/mois</h4>
+              <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
+                sem urna, a mattis leo
+                gravida laoreet.</p>
+              <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
+                  <span class="btn-svg-icon">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                      enable-background="new 0 0 24 24" xml:space="preserve">
+                      <g id="Group_9767" transform="translate(0)">
+                        <path id="Path_1081"
+                          d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
                    C18.2,1.4,17.3,1,16.3,1c-1,0-2,0.4-2.7,1.1l-9.7,9.7c-0.1,0.1-0.1,0.2-0.2,0.3l-1.2,5.7c0,0.2,0,0.4,0.2,0.6
                    C2.8,18.5,2.9,18.6,3.1,18.6z M16.3,2.2c1.4,0,2.6,1.2,2.6,2.6c0,0,0,0,0,0c0,0.7-0.3,1.3-0.7,1.8l-3.7-3.7
                    C14.9,2.5,15.6,2.2,16.3,2.2z M13.6,3.8l3.7,3.7l-8.5,8.4l-3.7-3.6L13.6,3.8z M4.7,13.5l2.9,2.9l-3.8,0.8L4.7,13.5z" />
-                      <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
+                        <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
                    C22.6,22.1,22.3,21.8,22,21.8z" />
-                    </g>
-                  </svg>
-                </span>
-                <span>Postuler</span>
-              </button>
-              <div class="">
-                <a href="javascript:void(0);" class="card-bottom-icon share-icon">
-                  <mat-icon>share</mat-icon>
-                </a>
-                <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
-                  <mat-icon>favorite_border</mat-icon>
-                </a>
+                      </g>
+                    </svg>
+                  </span>
+                  <span>Postuler</span>
+                </button>
+                <div class="">
+                  <a href="javascript:void(0);" class="card-bottom-icon share-icon">
+                    <mat-icon>share</mat-icon>
+                  </a>
+                  <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
+                    <mat-icon>favorite_border</mat-icon>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
-          <div class="card-footer-body">
-            <mat-card-title>Barman</mat-card-title>
-            <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
-          </div>
-          <button mat-mini-fab color="secondary" class="btn-headphone-fab">
-            <span class="mat-icon">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                enable-background="new 0 0 24 24" xml:space="preserve">
-                <g id="Group_9715" transform="translate(0.267 0.267)">
-                  <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
+          <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
+            <div class="card-footer-body">
+              <mat-card-title>Barman</mat-card-title>
+              <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
+            </div>
+            <button mat-mini-fab color="secondary" class="btn-headphone-fab">
+              <span class="mat-icon">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                  enable-background="new 0 0 24 24" xml:space="preserve">
+                  <g id="Group_9715" transform="translate(0.267 0.267)">
+                    <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
 		c0.8-0.8,0.8-2.2,0-3l0.5-0.6c1.1,1.1,1.1,2.9,0,4.1L7.7,16.7z" />
-                  <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
+                    <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
 		L11.8,20.8z" />
-                  <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
+                    <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
 		c0,0.1,0,0.2,0,0.4c1.1,0.5,1.8,1.6,1.8,2.8v2.8c0,1.7-1.4,3.1-3.1,3.1v0.7c0,0.2-0.2,0.3-0.3,0.3l0,0h-1.4c-0.2,0-0.3-0.2-0.3-0.3
 		l0,0V10c0-0.2,0.2-0.3,0.3-0.3l0,0h1c-0.6-3.9-4.4-6.6-8.3-6c-3.1,0.5-5.5,2.9-6,6h1c0.2,0,0.3,0.2,0.3,0.3l0,0v10.3
 		c0,0.2-0.2,0.3-0.3,0.3l0,0H4c-0.2,0-0.3-0.2-0.3-0.3l0,0v-0.7c-1.7,0-3.1-1.4-3.1-3.1v-2.8C0.6,12.6,1.3,11.5,2.4,11z M19.5,19
@@ -771,74 +718,74 @@
 		C4.2,5.6,8.2,2.5,12.5,3c3.6,0.4,6.5,3.3,6.9,6.9V10v0.2c0,0.2,0,0.4,0,0.5c0.2,0,0.4,0,0.6,0.1c0-0.1,0-0.1,0-0.2
 		c0-4.7-3.8-8.5-8.5-8.5S3,5.9,3,10.6c0,0.1,0,0.1,0,0.2c0.2,0,0.4-0.1,0.6-0.1c0-0.2,0-0.4,0-0.5V10C3.7,10,3.7,10,3.7,9.9L3.7,9.9
 		z M1.3,16.6c0,1.3,1.1,2.4,2.4,2.4v-7.6c-1.3,0-2.4,1.1-2.4,2.4V16.6z" />
-                  <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
+                    <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
 		C20.2,15.9,20.3,15.7,20.5,15.7L20.5,15.7z" />
-                  <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+                    <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
 		C20.2,14.5,20.3,14.4,20.5,14.4L20.5,14.4z" />
-                  <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+                    <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
 		C20.2,13.1,20.3,13,20.5,13L20.5,13z" />
-                </g>
-              </svg>
-            </span>
-          </button>
-        </mat-card-footer>
-      </mat-card>
-      <mat-card fxFlex.lt-md="44.5" class="card-image-action">
-        <div class="card-image-box">
-          <img mat-card-md-image class="image" src="/assets/images/image-6.png" alt="image">
-          <div class="card-hover-content">
-            <h5>Barman</h5>
-            <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
-            <h4>1350€/mois</h4>
-            <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
-              sem urna, a mattis leo
-              gravida laoreet.</p>
-            <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
-              <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
-                <span class="btn-svg-icon">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                    enable-background="new 0 0 24 24" xml:space="preserve">
-                    <g id="Group_9767" transform="translate(0)">
-                      <path id="Path_1081"
-                        d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
+                  </g>
+                </svg>
+              </span>
+            </button>
+          </mat-card-footer>
+        </mat-card>
+        <mat-card fxFlex.lt-md="46" class="card-image-action card-w-large">
+          <div class="card-image-box">
+            <img mat-card-md-image class="image" src="/assets/images/image-4.png" alt="image">
+            <div class="card-hover-content">
+              <h5>Barman</h5>
+              <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
+              <h4>1350€/mois</h4>
+              <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
+                sem urna, a mattis leo
+                gravida laoreet.</p>
+              <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
+                  <span class="btn-svg-icon">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                      enable-background="new 0 0 24 24" xml:space="preserve">
+                      <g id="Group_9767" transform="translate(0)">
+                        <path id="Path_1081"
+                          d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
                    C18.2,1.4,17.3,1,16.3,1c-1,0-2,0.4-2.7,1.1l-9.7,9.7c-0.1,0.1-0.1,0.2-0.2,0.3l-1.2,5.7c0,0.2,0,0.4,0.2,0.6
                    C2.8,18.5,2.9,18.6,3.1,18.6z M16.3,2.2c1.4,0,2.6,1.2,2.6,2.6c0,0,0,0,0,0c0,0.7-0.3,1.3-0.7,1.8l-3.7-3.7
                    C14.9,2.5,15.6,2.2,16.3,2.2z M13.6,3.8l3.7,3.7l-8.5,8.4l-3.7-3.6L13.6,3.8z M4.7,13.5l2.9,2.9l-3.8,0.8L4.7,13.5z" />
-                      <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
+                        <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
                    C22.6,22.1,22.3,21.8,22,21.8z" />
-                    </g>
-                  </svg>
-                </span>
-                <span>Postuler</span>
-              </button>
-              <div class="">
-                <a href="javascript:void(0);" class="card-bottom-icon share-icon">
-                  <mat-icon>share</mat-icon>
-                </a>
-                <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
-                  <mat-icon>favorite_border</mat-icon>
-                </a>
+                      </g>
+                    </svg>
+                  </span>
+                  <span>Postuler</span>
+                </button>
+                <div class="">
+                  <a href="javascript:void(0);" class="card-bottom-icon share-icon">
+                    <mat-icon>share</mat-icon>
+                  </a>
+                  <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
+                    <mat-icon>favorite_border</mat-icon>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
-          <div class="card-footer-body">
-            <mat-card-title>Agent de restauration</mat-card-title>
-            <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
-          </div>
-          <button mat-mini-fab color="secondary" class="btn-headphone-fab">
-            <span class="mat-icon">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                enable-background="new 0 0 24 24" xml:space="preserve">
-                <g id="Group_9715" transform="translate(0.267 0.267)">
-                  <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
+          <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
+            <div class="card-footer-body">
+              <mat-card-title>Chef d'atelier</mat-card-title>
+              <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
+            </div>
+            <button mat-mini-fab color="secondary" class="btn-headphone-fab">
+              <span class="mat-icon">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                  enable-background="new 0 0 24 24" xml:space="preserve">
+                  <g id="Group_9715" transform="translate(0.267 0.267)">
+                    <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
 		c0.8-0.8,0.8-2.2,0-3l0.5-0.6c1.1,1.1,1.1,2.9,0,4.1L7.7,16.7z" />
-                  <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
+                    <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
 		L11.8,20.8z" />
-                  <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
+                    <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
 		c0,0.1,0,0.2,0,0.4c1.1,0.5,1.8,1.6,1.8,2.8v2.8c0,1.7-1.4,3.1-3.1,3.1v0.7c0,0.2-0.2,0.3-0.3,0.3l0,0h-1.4c-0.2,0-0.3-0.2-0.3-0.3
 		l0,0V10c0-0.2,0.2-0.3,0.3-0.3l0,0h1c-0.6-3.9-4.4-6.6-8.3-6c-3.1,0.5-5.5,2.9-6,6h1c0.2,0,0.3,0.2,0.3,0.3l0,0v10.3
 		c0,0.2-0.2,0.3-0.3,0.3l0,0H4c-0.2,0-0.3-0.2-0.3-0.3l0,0v-0.7c-1.7,0-3.1-1.4-3.1-3.1v-2.8C0.6,12.6,1.3,11.5,2.4,11z M19.5,19
@@ -846,74 +793,74 @@
 		C4.2,5.6,8.2,2.5,12.5,3c3.6,0.4,6.5,3.3,6.9,6.9V10v0.2c0,0.2,0,0.4,0,0.5c0.2,0,0.4,0,0.6,0.1c0-0.1,0-0.1,0-0.2
 		c0-4.7-3.8-8.5-8.5-8.5S3,5.9,3,10.6c0,0.1,0,0.1,0,0.2c0.2,0,0.4-0.1,0.6-0.1c0-0.2,0-0.4,0-0.5V10C3.7,10,3.7,10,3.7,9.9L3.7,9.9
 		z M1.3,16.6c0,1.3,1.1,2.4,2.4,2.4v-7.6c-1.3,0-2.4,1.1-2.4,2.4V16.6z" />
-                  <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
+                    <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
 		C20.2,15.9,20.3,15.7,20.5,15.7L20.5,15.7z" />
-                  <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+                    <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
 		C20.2,14.5,20.3,14.4,20.5,14.4L20.5,14.4z" />
-                  <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+                    <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
 		C20.2,13.1,20.3,13,20.5,13L20.5,13z" />
-                </g>
-              </svg>
-            </span>
-          </button>
-        </mat-card-footer>
-      </mat-card>
-      <mat-card fxFlex.lt-md="44.5" class="card-image-action">
-        <div class="card-image-box">
-          <img mat-card-md-image class="image" src="/assets/images/image-4.png" alt="image">
-          <div class="card-hover-content">
-            <h5>Barman</h5>
-            <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
-            <h4>1350€/mois</h4>
-            <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
-              sem urna, a mattis leo
-              gravida laoreet.</p>
-            <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
-              <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
-                <span class="btn-svg-icon">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                    enable-background="new 0 0 24 24" xml:space="preserve">
-                    <g id="Group_9767" transform="translate(0)">
-                      <path id="Path_1081"
-                        d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
+                  </g>
+                </svg>
+              </span>
+            </button>
+          </mat-card-footer>
+        </mat-card>
+        <mat-card fxFlex.lt-md="46" class="card-image-action">
+          <div class="card-image-box">
+            <img mat-card-md-image class="image" src="/assets/images/image-6.png" alt="image">
+            <div class="card-hover-content">
+              <h5>Barman</h5>
+              <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
+              <h4>1350€/mois</h4>
+              <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
+                sem urna, a mattis leo
+                gravida laoreet.</p>
+              <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
+                  <span class="btn-svg-icon">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                      enable-background="new 0 0 24 24" xml:space="preserve">
+                      <g id="Group_9767" transform="translate(0)">
+                        <path id="Path_1081"
+                          d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
                    C18.2,1.4,17.3,1,16.3,1c-1,0-2,0.4-2.7,1.1l-9.7,9.7c-0.1,0.1-0.1,0.2-0.2,0.3l-1.2,5.7c0,0.2,0,0.4,0.2,0.6
                    C2.8,18.5,2.9,18.6,3.1,18.6z M16.3,2.2c1.4,0,2.6,1.2,2.6,2.6c0,0,0,0,0,0c0,0.7-0.3,1.3-0.7,1.8l-3.7-3.7
                    C14.9,2.5,15.6,2.2,16.3,2.2z M13.6,3.8l3.7,3.7l-8.5,8.4l-3.7-3.6L13.6,3.8z M4.7,13.5l2.9,2.9l-3.8,0.8L4.7,13.5z" />
-                      <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
+                        <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
                    C22.6,22.1,22.3,21.8,22,21.8z" />
-                    </g>
-                  </svg>
-                </span>
-                <span>Postuler</span>
-              </button>
-              <div class="">
-                <a href="javascript:void(0);" class="card-bottom-icon share-icon">
-                  <mat-icon>share</mat-icon>
-                </a>
-                <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
-                  <mat-icon>favorite_border</mat-icon>
-                </a>
+                      </g>
+                    </svg>
+                  </span>
+                  <span>Postuler</span>
+                </button>
+                <div class="">
+                  <a href="javascript:void(0);" class="card-bottom-icon share-icon">
+                    <mat-icon>share</mat-icon>
+                  </a>
+                  <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
+                    <mat-icon>favorite_border</mat-icon>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
-          <div class="card-footer-body">
-            <mat-card-title>Chef d'atelier</mat-card-title>
-            <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
-          </div>
-          <button mat-mini-fab color="secondary" class="btn-headphone-fab">
-            <span class="mat-icon">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                enable-background="new 0 0 24 24" xml:space="preserve">
-                <g id="Group_9715" transform="translate(0.267 0.267)">
-                  <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
+          <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
+            <div class="card-footer-body">
+              <mat-card-title>Agent de restauration</mat-card-title>
+              <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
+            </div>
+            <button mat-mini-fab color="secondary" class="btn-headphone-fab">
+              <span class="mat-icon">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                  enable-background="new 0 0 24 24" xml:space="preserve">
+                  <g id="Group_9715" transform="translate(0.267 0.267)">
+                    <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
 		c0.8-0.8,0.8-2.2,0-3l0.5-0.6c1.1,1.1,1.1,2.9,0,4.1L7.7,16.7z" />
-                  <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
+                    <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
 		L11.8,20.8z" />
-                  <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
+                    <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
 		c0,0.1,0,0.2,0,0.4c1.1,0.5,1.8,1.6,1.8,2.8v2.8c0,1.7-1.4,3.1-3.1,3.1v0.7c0,0.2-0.2,0.3-0.3,0.3l0,0h-1.4c-0.2,0-0.3-0.2-0.3-0.3
 		l0,0V10c0-0.2,0.2-0.3,0.3-0.3l0,0h1c-0.6-3.9-4.4-6.6-8.3-6c-3.1,0.5-5.5,2.9-6,6h1c0.2,0,0.3,0.2,0.3,0.3l0,0v10.3
 		c0,0.2-0.2,0.3-0.3,0.3l0,0H4c-0.2,0-0.3-0.2-0.3-0.3l0,0v-0.7c-1.7,0-3.1-1.4-3.1-3.1v-2.8C0.6,12.6,1.3,11.5,2.4,11z M19.5,19
@@ -921,18 +868,94 @@
 		C4.2,5.6,8.2,2.5,12.5,3c3.6,0.4,6.5,3.3,6.9,6.9V10v0.2c0,0.2,0,0.4,0,0.5c0.2,0,0.4,0,0.6,0.1c0-0.1,0-0.1,0-0.2
 		c0-4.7-3.8-8.5-8.5-8.5S3,5.9,3,10.6c0,0.1,0,0.1,0,0.2c0.2,0,0.4-0.1,0.6-0.1c0-0.2,0-0.4,0-0.5V10C3.7,10,3.7,10,3.7,9.9L3.7,9.9
 		z M1.3,16.6c0,1.3,1.1,2.4,2.4,2.4v-7.6c-1.3,0-2.4,1.1-2.4,2.4V16.6z" />
-                  <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
+                    <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
 		C20.2,15.9,20.3,15.7,20.5,15.7L20.5,15.7z" />
-                  <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+                    <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
 		C20.2,14.5,20.3,14.4,20.5,14.4L20.5,14.4z" />
-                  <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+                    <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
 		C20.2,13.1,20.3,13,20.5,13L20.5,13z" />
-                </g>
-              </svg>
-            </span>
-          </button>
-        </mat-card-footer>
-      </mat-card>
+                  </g>
+                </svg>
+              </span>
+            </button>
+          </mat-card-footer>
+        </mat-card>
+        <mat-card fxFlex.lt-md="46" class="card-image-action">
+          <div class="card-image-box">
+            <img mat-card-md-image class="image" src="/assets/images/image-4.png" alt="image">
+            <div class="card-hover-content">
+              <h5>Barman</h5>
+              <span class="card-hover-subtitle">CDD 3 mois - BORDEAUX</span>
+              <h4>1350€/mois</h4>
+              <p class="card-hover-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur
+                sem urna, a mattis leo
+                gravida laoreet.</p>
+              <div class="card-hover-bottom" fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <button mat-button class="btn-rounded btn-with-icon btn-primary-gradient">
+                  <span class="btn-svg-icon">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                      enable-background="new 0 0 24 24" xml:space="preserve">
+                      <g id="Group_9767" transform="translate(0)">
+                        <path id="Path_1081"
+                          d="M3.1,18.6h0.1l5.7-1.2c0.1,0,0.2-0.1,0.3-0.1L19,7.5c0.7-0.7,1.1-1.7,1.1-2.7c0-1-0.4-2-1.1-2.7
+                   C18.2,1.4,17.3,1,16.3,1c-1,0-2,0.4-2.7,1.1l-9.7,9.7c-0.1,0.1-0.1,0.2-0.2,0.3l-1.2,5.7c0,0.2,0,0.4,0.2,0.6
+                   C2.8,18.5,2.9,18.6,3.1,18.6z M16.3,2.2c1.4,0,2.6,1.2,2.6,2.6c0,0,0,0,0,0c0,0.7-0.3,1.3-0.7,1.8l-3.7-3.7
+                   C14.9,2.5,15.6,2.2,16.3,2.2z M13.6,3.8l3.7,3.7l-8.5,8.4l-3.7-3.6L13.6,3.8z M4.7,13.5l2.9,2.9l-3.8,0.8L4.7,13.5z" />
+                        <path id="Path_1082" d="M22,21.8H2c-0.3,0-0.6,0.3-0.6,0.6C1.4,22.7,1.7,23,2,23H22c0.3,0,0.6-0.3,0.6-0.6
+                   C22.6,22.1,22.3,21.8,22,21.8z" />
+                      </g>
+                    </svg>
+                  </span>
+                  <span>Postuler</span>
+                </button>
+                <div class="">
+                  <a href="javascript:void(0);" class="card-bottom-icon share-icon">
+                    <mat-icon>share</mat-icon>
+                  </a>
+                  <a href="javascript:void(0);" class="card-bottom-icon favorite-icon">
+                    <mat-icon>favorite_border</mat-icon>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <mat-card-footer fxLayout="row wrap" fxLayoutAlign="space-between center">
+            <div class="card-footer-body">
+              <mat-card-title>Chef d'atelier</mat-card-title>
+              <mat-card-subtitle>CDI - BORDEAUX</mat-card-subtitle>
+            </div>
+            <button mat-mini-fab color="secondary" class="btn-headphone-fab">
+              <span class="mat-icon">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                  enable-background="new 0 0 24 24" xml:space="preserve">
+                  <g id="Group_9715" transform="translate(0.267 0.267)">
+                    <path id="Volume-2" fill="#FFFFFF" d="M9.8,18.8c1.9-2,1.9-5.1,0-7.1l0.5-0.6c2.3,2.2,2.3,5.8,0.1,8l-0.1,0.1L9.8,18.8z M7.7,16.7
+		c0.8-0.8,0.8-2.2,0-3l0.5-0.6c1.1,1.1,1.1,2.9,0,4.1L7.7,16.7z" />
+                    <path id="Volume-3" fill="#FFFFFF" d="M11.8,20.8c3.1-3,3.1-7.9,0.1-11l-0.1-0.1l0.6-0.6c3.4,3.3,3.4,8.8,0.1,12.2c0,0,0,0-0.1,0.1
+		L11.8,20.8z" />
+                    <path id="Path_997" fill="#FFFFFF" d="M2.4,11c0-0.1,0-0.2,0-0.4c-0.1-5.1,4-9.2,9.1-9.3s9.2,4,9.3,9.1c0,0.1,0,0.1,0,0.2
+		c0,0.1,0,0.2,0,0.4c1.1,0.5,1.8,1.6,1.8,2.8v2.8c0,1.7-1.4,3.1-3.1,3.1v0.7c0,0.2-0.2,0.3-0.3,0.3l0,0h-1.4c-0.2,0-0.3-0.2-0.3-0.3
+		l0,0V10c0-0.2,0.2-0.3,0.3-0.3l0,0h1c-0.6-3.9-4.4-6.6-8.3-6c-3.1,0.5-5.5,2.9-6,6h1c0.2,0,0.3,0.2,0.3,0.3l0,0v10.3
+		c0,0.2-0.2,0.3-0.3,0.3l0,0H4c-0.2,0-0.3-0.2-0.3-0.3l0,0v-0.7c-1.7,0-3.1-1.4-3.1-3.1v-2.8C0.6,12.6,1.3,11.5,2.4,11z M19.5,19
+		c1.3,0,2.4-1.1,2.4-2.4v-2.8c0-1.3-1.1-2.4-2.4-2.4V19z M18.1,10.4V20h0.7v-9.6H18.1z M4.4,20H5v-9.6H4.4V20z M3.7,9.9
+		C4.2,5.6,8.2,2.5,12.5,3c3.6,0.4,6.5,3.3,6.9,6.9V10v0.2c0,0.2,0,0.4,0,0.5c0.2,0,0.4,0,0.6,0.1c0-0.1,0-0.1,0-0.2
+		c0-4.7-3.8-8.5-8.5-8.5S3,5.9,3,10.6c0,0.1,0,0.1,0,0.2c0.2,0,0.4-0.1,0.6-0.1c0-0.2,0-0.4,0-0.5V10C3.7,10,3.7,10,3.7,9.9L3.7,9.9
+		z M1.3,16.6c0,1.3,1.1,2.4,2.4,2.4v-7.6c-1.3,0-2.4,1.1-2.4,2.4V16.6z" />
+                    <path id="Path_998" fill="#FFFFFF" d="M20.5,15.7c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3V16
+		C20.2,15.9,20.3,15.7,20.5,15.7L20.5,15.7z" />
+                    <path id="Path_999" fill="#FFFFFF" d="M20.5,14.4c0.2,0,0.3,0.2,0.3,0.3l0,0V15c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+		C20.2,14.5,20.3,14.4,20.5,14.4L20.5,14.4z" />
+                    <path id="Path_1000" fill="#FFFFFF" d="M20.5,13c0.2,0,0.3,0.2,0.3,0.3l0,0v0.3c0,0.2-0.2,0.3-0.3,0.3s-0.3-0.2-0.3-0.3v-0.3
+		C20.2,13.1,20.3,13,20.5,13L20.5,13z" />
+                  </g>
+                </svg>
+              </span>
+            </button>
+          </mat-card-footer>
+        </mat-card>
+      </ngx-masonry>
     </div>
 
 
@@ -1055,7 +1078,7 @@
 
   <!-- Fixed Media player -->
   <div class="media-player-fixed">
-    <div fxLayout="row wrap" fxLayoutAlign="space-between start">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between start" fxHide>
       <div class="media-song-name" fxFlex="24" fxFlexAlign="center">
         <h5>Technicien de surface H/F</h5>
         <p>Chambaudu Nettoyage, 33300 Bordeaux</p>
@@ -1115,6 +1138,11 @@
         </div>
       </div>
     </div>
+    <audio controls preload="none" class="audio-player">
+      <source src="/assets/audio/Neele-Neele-Ambar.ogg" type="audio/ogg">
+      <source src="/assets/audio/Neele-Neele-Ambar.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
 
   </div>
   <!-- End Fixed Media player -->
