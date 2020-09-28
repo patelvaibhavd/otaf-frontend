@@ -295,8 +295,8 @@
       </button>
     </div>
     <div *ngIf="pageLoad">
-      <ngx-masonry [options]="myOptions" [ordered]="false" class="masonry-with-columns">
-        <mat-card ngxMasonryItem  class="card-image-action grid-item 1">
+      <ngx-masonry [options]="myOptions" [ordered]="true" class="masonry-with-columns">
+        <mat-card ngxMasonryItem  class="card-image-action grid-item">
           <div class="card-image-box">
             <span class="card-overlay-logo">
               <img src="/assets/images/card-img-logo-1.png" width="50px" class="" alt="icon">
@@ -374,7 +374,7 @@
             </button>
           </mat-card-footer>
         </mat-card>
-        <mat-card ngxMasonryItem class="card-image-action grid-item 2 grid-item--width2">
+        <mat-card ngxMasonryItem class="card-image-action grid-item grid-item--width2">
           <div class="card-image-box">
             <span class="card-overlay-logo">
               <img src="/assets/images/card-img-logo-2.png" width="50px" class="" alt="icon">
@@ -452,7 +452,7 @@
             </button>
           </mat-card-footer>
         </mat-card>
-        <mat-card ngxMasonryItem class="card-image-action grid-item 3">
+        <mat-card ngxMasonryItem class="card-image-action grid-item">
           <div class="card-image-box">
             <span class="card-overlay-logo">
               <img src="/assets/images/card-img-logo-3.png" width="50px" class="" alt="icon">
@@ -530,7 +530,7 @@
             </button>
           </mat-card-footer>
         </mat-card>
-        <mat-card ngxMasonryItem class="card-image-action grid-item 4">
+        <mat-card ngxMasonryItem class="card-image-action grid-item">
           <div class="card-image-box">
             <span class="card-warning-icon">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -650,7 +650,7 @@
             </button>
           </mat-card-footer>
         </mat-card>
-        <mat-card ngxMasonryItem class="card-image-action grid-item 5">
+        <mat-card ngxMasonryItem class="card-image-action grid-item">
           <div class="card-image-box">
             <span class="card-overlay-logo">
               <img src="/assets/images/card-img-logo-4.png" width="50px" class="" alt="icon">
@@ -728,7 +728,7 @@
             </button>
           </mat-card-footer>
         </mat-card>
-        <mat-card ngxMasonryItem class="card-image-action grid-item 6 grid-item--width2">
+        <mat-card ngxMasonryItem class="card-image-action grid-item grid-item--width2">
           <div class="card-image-box">
             <img mat-card-md-image class="image" src="/assets/images/image-4.png" alt="image">
             <div class="card-hover-content">
@@ -803,7 +803,7 @@
             </button>
           </mat-card-footer>
         </mat-card>
-        <mat-card ngxMasonryItem class="card-image-action grid-item 7">
+        <mat-card ngxMasonryItem class="card-image-action grid-item">
           <div class="card-image-box">
             <img mat-card-md-image class="image" src="/assets/images/image-6.png" alt="image">
             <div class="card-hover-content">
@@ -878,7 +878,7 @@
             </button>
           </mat-card-footer>
         </mat-card>
-        <mat-card ngxMasonryItem class="card-image-action grid-item 8">
+        <mat-card ngxMasonryItem class="card-image-action grid-item">
           <div class="card-image-box">
             <img mat-card-md-image class="image" src="/assets/images/image-4.png" alt="image">
             <div class="card-hover-content">
@@ -955,7 +955,6 @@
         </mat-card>
       </ngx-masonry>
     </div>
-
 
     <!-- save button -->
     <div class="mb-3" fxLayout="row wrap" fxLayoutAlign="center center" fxHide.lt-md>

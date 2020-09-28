@@ -38,6 +38,7 @@ export class LandingPageComponent implements OnInit {
   public myOptions: NgxMasonryOptions = {
     gutter: 8,
     horizontalOrder: true,
+    resize: true,
     itemSelector: '.grid-item',
   };
 
@@ -46,7 +47,7 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.pageLoad = true;
-    }, 100);
+    }, 200);
   }
 
 }

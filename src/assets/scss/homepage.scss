@@ -294,7 +294,7 @@
 
   .masonry-with-columns {
     margin-bottom: $space40;
-    // height: 2000px !important;
+    // height: 800px !important;
 
     @media (max-width: $breakpoint-md) {
       height: auto !important;
@@ -326,7 +326,7 @@
     
     &.grid-item {
       // width: 200px;
-      width: 18%;
+      width: 19%;
       @media (max-width: $breakpoint-md) {
         width: 48%;
       }
@@ -383,7 +383,7 @@
 
     .mat-card-footer {
       margin: 0;
-      padding: $space12 $space24;
+      padding: $space12 $space16;
       position: relative;
 
       @media (max-width: $breakpoint-md) {
