@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { NgxMasonryOptions } from 'ngx-masonry';
 
@@ -7,7 +7,7 @@ import { NgxMasonryOptions } from 'ngx-masonry';
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })
-export class LandingPageComponent implements OnInit {
+export class LandingPageComponent implements OnInit,AfterViewInit {
   pageLoad = false;
 
   // Slider options
@@ -43,11 +43,43 @@ export class LandingPageComponent implements OnInit {
   };
 
   constructor() { }
-
+ngAfterViewInit(){
+  setTimeout(() => {
+    this.initCards();
+  }, 5000);
+}
   ngOnInit(): void {
     setTimeout(() => {
       this.pageLoad = true;
     }, 200);
   }
 
+  initCards(){
+    const cardHeight = [];
+    document.querySelectorAll('ngx-masonry > mat-card').forEach((element, i) => {
+      cardHeight.push(document.querySelectorAll('ngx-masonry > mat-card')[i].clientHeight);
+      // console.log(document.querySelectorAll('ngx-masonry > mat-card')[i].clientHeight, document.querySelectorAll('ngx-masonry > mat-card')[i]);
+    });
+    // cardHeight.reduce()
+    console.log('cardHeight',cardHeight);
+    
+    var largest= 0;
+    for (let i=0; i<=largest;i++){
+        if (cardHeight[i]>largest) {
+            var largest = cardHeight[i];
+        }
+    }
+    let maxHeight = largest * 2;
+    console.log(maxHeight, 'Max Height');
+
+    const sum = cardHeight.reduce(function(a, b) {
+      return a + b;
+    }, 0);
+    console.log('sum',sum)
+    if (document.querySelector('ngx-masonry')){
+      document.querySelector('ngx-masonry')['style'].height = `${maxHeight} px`;
+      console.log(document.querySelector('ngx-masonry')['style'].height = `${maxHeight}px`);
+      
+    }
+  }
 }
