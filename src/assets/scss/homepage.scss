@@ -294,50 +294,52 @@
 
   .masonry-with-columns {
     margin-bottom: $space40;
-    // height: 800px !important;
+    position: relative;
+    overflow: hidden;
 
     @media (max-width: $breakpoint-md) {
-      height: auto !important;
       margin-bottom: 0;
-      width: 100% !important;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: stretch;
-      justify-content: space-around;
+      height: auto !important;
     }
   }
+  .sizer-element {
+    position: absolute;
+    visibility: hidden;
+    width: 8.333%;
+  }
+
+  .grid-item {
+    width: 25%;
+    padding: 0 $space6;
+    @media (max-width: $breakpoint-md) {
+      width: 46%;      
+      position: relative !important;
+      left: auto !important;
+      top: auto !important;
+      transform: none !important;
+      padding: 0;
+      display: flex;
+    }
+    // &.grid-item--width2 {
+    //   width: 24%;
+    //   @media (max-width: $breakpoint-md) {
+    //     width: 48%;
+    //   }
+    // }
+  }  
 
   .card-image-action {
     padding: 0;
     border-radius: 20px;
     box-shadow: $card-shadow;
     transition: $transition;
-    margin-bottom: $space8;
+    margin-bottom: $space12;
+    width: 100%;
 
     @media (max-width: $breakpoint-md) {
       margin-bottom: $space30;
       display: flex;
       flex-direction: column;
-      position: relative !important;
-      left: auto !important;
-      top: auto !important;
-    }
-
-    
-    &.grid-item {
-      // width: 200px;
-      width: 19%;
-      @media (max-width: $breakpoint-md) {
-        width: 48%;
-      }
-    }
-
-    &.grid-item--width2 {
-      // width: 274px;
-      width: 28%;
-      @media (max-width: $breakpoint-md) {
-        width: 48%;
-      }
     }
 
     .card-image-box {
