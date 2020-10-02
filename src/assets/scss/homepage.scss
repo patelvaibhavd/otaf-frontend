@@ -311,6 +311,8 @@
   .grid-item {
     width: 25%;
     padding: 0 $space6;
+    transition: 0.5s ease;
+
     @media (max-width: $breakpoint-md) {
       width: 46%;      
       position: relative !important;

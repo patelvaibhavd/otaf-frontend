@@ -16,7 +16,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     SharedModule,
     DemoMaterialModule,
     FlexLayoutModule,
-    CarouselModule,
+    CarouselModule
   ]
 })
 export class LandingPageModule { }

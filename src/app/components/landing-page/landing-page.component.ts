@@ -45,8 +45,12 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
         itemSelector: '.grid-item',
         sizer: this.shuffleSizer.nativeElement,
         buffer: 1,
+        speed: 700,
+        staggerAmount: 30,
+        staggerAmountMax: 250,
+        easing: 'cubic-bezier(0.5, 0.1, 0.4, 1)'
       });
-    }, 500);
+    }, 700);
   }
   ngOnInit(): void {
     setTimeout(() => {
